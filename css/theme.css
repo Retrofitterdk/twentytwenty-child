@@ -1,0 +1,71 @@
+/* Site Header --------------------------- */
+.header-titles-wrapper {
+  max-width: 390px;
+}
+
+.site-description {
+  background: #c63527;
+  color: white;
+  padding: 0.6em;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: arial;
+  font-weight: 400;
+  letter-spacing: 5px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.home .header-inner {
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+
+.home .header-navigation-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: #fff;
+  opacity: 60%;
+  padding: 0 2em;
+  height: 4em;
+}
+
+.home .header-titles-wrapper {
+  -webkit-order: 2;
+          order: 2;
+  position: absolute;
+  bottom: 8rem;
+  max-width: 540px;
+  -webkit-align-self: flex-start;
+          align-self: flex-start;
+}
+
+.home .site-logo,
+.home .site-description {
+  width: 100%;
+  max-width: 600px;
+}
+
+.home .site-description {
+  font-size: 16px;
+  margin-top: 2em;
+}
+
+.home .site-logo img {
+  max-height: none;
+}
+
+.wp-custom-header-video-button {
+  position: absolute;
+  top: 10rem;
+  left: 2rem;
+}
+
+/* Media ------------------------------------- */
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=theme.css.map */

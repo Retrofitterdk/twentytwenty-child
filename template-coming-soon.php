@@ -1,18 +1,18 @@
 <?php
 /**
- * The template for displaying single pages.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * Template Name: Coming Soon Template
+ * Template Post Type: post, page
  *
  * @package WordPress
  * @subpackage Twenty_Twenty_child
  * @since Twenty Twenty Child 1.0
  */
 
-get_header('frontpage');
+get_header('blank');
 ?>
 
 <main id="site-content" role="main">
+
 	<?php
 
 	if ( have_posts() ) {
@@ -20,7 +20,7 @@ get_header('frontpage');
 		while ( have_posts() ) {
 			the_post();
 
-			get_template_part( 'template-parts/content', 'blank' );
+			get_template_part( 'template-parts/content', 'coming-soon' );
 		}
 	}
 
