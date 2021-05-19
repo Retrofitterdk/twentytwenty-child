@@ -11,10 +11,11 @@ function twentytwenty_child_enqueue_styles() {
         array( $parenthandle ),
         $theme->get('Version') // this only works if you have Version in the style header
     );
+
     wp_enqueue_style( 'twentytwenty-child-theme-style', get_stylesheet_directory_uri() . '/css/theme.css',
-    array(),  // if the theme code has a dependency, copy it to here
-    $theme->get('Version') // this only works if you have Version in the style header
-);
+        array(),  // if the theme code has a dependency, copy it to here
+        $theme->get('Version') // this only works if you have Version in the style header
+    );
 }
 add_action( 'wp_enqueue_scripts', 'twentytwenty_child_enqueue_styles' );
 
@@ -22,3 +23,12 @@ add_action( 'wp_enqueue_scripts', 'twentytwenty_child_enqueue_styles' );
  * Implement the Custom Header feature.
  */
 require_once( get_stylesheet_directory(). '/inc/custom-header.php' );
+
+// Implement theme specific block styles
+require_once( get_stylesheet_directory(). '/inc/block-styles.php' );
+
+// Remove inline styles
+add_action( 'wp_enqueue_scripts', function() {
+    $styles = wp_styles();
+    $styles->add_data( 'twentytwenty-style', 'after', array() );
+}, 20 );

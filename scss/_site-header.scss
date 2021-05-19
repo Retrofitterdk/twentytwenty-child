@@ -5,9 +5,10 @@
 }
 .site-description {
     background: #c63527;
+    width: 100%;
     color: white;
     padding: 0.6em;
-    font-size: 15px;
+    font-size: 12px;
 	text-transform: uppercase;
 	font-family: arial;
 	font-weight: 400;
@@ -16,11 +17,30 @@
 	text-align: center;
 }
 
-.home .header-inner {
+.home #site-header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    opacity: 70%;
+}
+
+.home .is-style-stick-to-top {
+    position: absolute;
+    top: 0;
+}
+
+.home.admin-bar .is-style-stick-to-top {
+    top: 32px;
+    @media screen and (max-width: 782px) {
+        top: 46px;
+    }
+}
+
+.page-template-template-media-header .header-inner {
     flex-direction: column;
 }
 
-.home .header-navigation-wrapper {
+.page-template-template-media-header .header-navigation-wrapper {
     width: 100%;
     position: absolute;
     top: 0;
@@ -30,7 +50,7 @@
     height: 4em;
 }
 
-.home .header-titles-wrapper {
+.page-template-template-media-header .header-titles-wrapper {
     order: 2;
     position: absolute;
     bottom: 8rem;
@@ -38,18 +58,18 @@
     align-self: flex-start;
 }
 
-.home .site-logo,
-.home .site-description {
+.page-template-template-media-header .site-logo,
+.page-template-template-media-header .site-description {
 	width: 100%;
 	max-width: 600px;
 }
 
-.home .site-description {
+.page-template-template-media-header .site-description {
     font-size: 16px;
 	margin-top: 2em
 }
 
-.home .site-logo img {
+.page-template-template-media-header .site-logo img {
 	max-height: none;
 }
 

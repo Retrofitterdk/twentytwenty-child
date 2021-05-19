@@ -32,6 +32,10 @@
 
 		<header id="site-header" class="header-footer-group" role="banner">
 
+			<div class="custom-header-media">
+				<?php the_custom_header_markup(); ?>
+			</div>
+
 			<div class="header-inner section-inner">
 
 				<div class="header-titles-wrapper">
@@ -57,10 +61,14 @@
 					<?php } ?>
 
 					<div class="header-titles">
-							<!-- Site title or logo. -->
-							<span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span>
-							<!-- Site description. -->
-							<span class="screen-reader-text"><?php bloginfo( 'description' ); ?></span>
+
+						<?php
+							// Site title or logo.
+							twentytwenty_site_logo();
+
+							// Site description.
+							twentytwenty_site_description();
+						?>
 
 					</div><!-- .header-titles -->
 
