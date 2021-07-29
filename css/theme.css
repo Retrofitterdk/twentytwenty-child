@@ -17,6 +17,7 @@
   text-align: center;
 }
 
+.page-template-template-canvas #site-header,
 .home #site-header {
   position: -webkit-sticky;
   position: sticky;
@@ -25,16 +26,19 @@
   opacity: 70%;
 }
 
+.page-template-template-canvas .is-style-stick-to-top,
 .home .is-style-stick-to-top {
   position: absolute;
   top: 0;
 }
 
+.page-template-template-canvas.admin-bar .is-style-stick-to-top,
 .home.admin-bar .is-style-stick-to-top {
   top: 32px;
 }
 @media screen and (max-width: 782px) {
-  .home.admin-bar .is-style-stick-to-top {
+  .page-template-template-canvas.admin-bar .is-style-stick-to-top,
+.home.admin-bar .is-style-stick-to-top {
     top: 46px;
   }
 }
@@ -44,6 +48,7 @@
           flex-direction: column;
 }
 
+.page-template-template-media-header .header-navigation-wrapper,
 .page-template-template-media-header .header-navigation-wrapper {
   width: 100%;
   position: absolute;
